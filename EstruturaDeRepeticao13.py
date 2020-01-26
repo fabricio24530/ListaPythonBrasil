@@ -6,7 +6,7 @@ expoente = int(input('Informe o expoente: '))
 resultado = base
 
 for i in range(expoente):
-    resultado = resultado * resultado
+    resultado = resultado * resultado  # O problema esta aqui
 
 
 
