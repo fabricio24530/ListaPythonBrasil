@@ -3,14 +3,12 @@ Não utilize a função de potência da linguagem.'''
 
 base = float(input('Informe a base: '))
 expoente = int(input('Informe o expoente: '))
-resultado = base
+base1 = base
+for i in range(expoente - 1):
+    resultado = base1 * base  # A logica se resuma a esta linha!!!
+    base1 = resultado
 
-for i in range(expoente):
-    resultado = resultado * resultado  # O problema esta aqui
+print(f'{base} elevado a {expoente} é igual a {resultado}')
 
 
 
-
-print(resultado)
-
-'''0 , 1, 2 ==> 1, 2 , 3'''
