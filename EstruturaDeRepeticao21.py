@@ -3,17 +3,14 @@
 
 number = int(input('Enter a integer number: '))
 list_ = list()
-cont_np = 0
 cont_yp = 0
 
-for i in range(1000):
+for i in range(number):
     list_.append(i)
 
 for i in list_:
     if number % (i+1) == 0:
         cont_yp += 1
-    else:
-        cont_np += 1
 
 if cont_yp == 2:
     print(f'The number {number} is prime')
