@@ -18,7 +18,8 @@ for i in lista:
         lista_primos.append(i)
         del lista[i]
 
-lista_primos.append(1)
+lista_primos.append(1)  # Incluir sempre o 1
+
 print(f'Os numeros primos entre 1 e {n} são:', end=' ')
 for i in lista_primos[::-1]:
       print(i, end=' ')
