@@ -16,12 +16,12 @@ for i in lista_numeros[::-1]:
 for i in lista:
     if lista.count(i) == 2:
         lista_primos.append(i)
-        del lista[i]
 
 lista_primos.append(1)  # Incluir sempre o 1
+lista_primos = list(set(lista_primos))  # Função set tira valores duplicados na lista
 
 print(f'Os numeros primos entre 1 e {n} são:', end=' ')
-for i in lista_primos[::-1]:
+for i in lista_primos:
       print(i, end=' ')
 
 print(f'\nE a quantidade de divisoes feitas foram de {sum(lista_primos)}')
