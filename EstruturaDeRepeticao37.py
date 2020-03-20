@@ -4,25 +4,38 @@ e seu peso. O final da digitação de dados deve ser dada quando o usuário digi
 programa também deve ser informados os códigos e valores do clente mais alto, do mais baixo, do mais gordo e do mais magro,
 além da média das alturas e dos pesos dos clientes'''
 
-var_controle = 1
-
-dic_peso = {}
-dic_altura = {}
-
-while var_controle != 0:
-
-    codigo = int(input('Informe seu codigo: '))
+lista_codigo = list()
+lista_peso = list()
+lista_altura = list()
 
 
-    peso = float(input('informe seu peso: '))
-    altura = float(input('Informe sua altura: '))
-    dic_peso[codigo] = peso
-    dic_altura[codigo] = altura
-    var_controle = int(input('Deseja cadastrar outro cliente:\n[1] - Sim\n[0] - Não\n'))
+while True:
 
-print(dic_peso)
-print(dic_altura)
+    cod = int(input('Insira o codigo do aluno: '))
+    lista_codigo.append(cod)
+    peso = float(input('Insira o peso do aluno: '))
+    lista_peso.append(peso)
+    altura = float(input('Insira a altura do aluno: '))
+    lista_altura.append(altura)
+    controle = input('Deseja inserir outro aluno:\n[S] - Sim\n[N] - Não\n').upper().strip()
 
+    if controle == 'S':
+        continue
+    elif controle == 'N':
+        break
 
-# print(f'O cliente mais pesado: {max(dic_peso)}')
-# print(f'O cliente mais alto: {max(dic_altura)}')
+maior_peso = max(lista_peso)
+menor_peso = min(lista_peso)
+peso_medio = sum(lista_peso)/len(lista_peso)
+
+maior_altura = max(lista_altura)
+menor_altura = min(lista_altura)
+altura_media = sum(lista_altura)/len(lista_altura)
+
+print(f'O aluno {lista_codigo[lista_peso.index(maior_peso)]} possui o maior peso: {maior_peso} kG')
+print(f'O aluno {lista_codigo[lista_peso.index(menor_peso)]} possui o menor peso: {menor_peso} kG')
+print(f'A media de peso entre os alunos é de: {peso_medio:.2f} kg')
+
+print(f'O aluno {lista_codigo[lista_altura.index(maior_altura)]} possui a maior altura: {maior_altura} m')
+print(f'O aluno {lista_codigo[lista_altura.index(menor_altura)]} possui a menor altura: {menor_altura} m')
+print(f'A media das alturas entre os alunos é de: {altura_media:.2f} m')
