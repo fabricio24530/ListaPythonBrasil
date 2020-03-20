@@ -8,13 +8,12 @@ lista2 = []
 for i in range(num, 0, -1):
     for j in range(num, 0, -1):
         if i % j == 0:
-            lista.append(i)
+            lista.append(i) # Os numeros primos se repetem duas vezes
 
 for k in lista:
-    if lista.count(k) == 2 and k not in lista2:
+    if lista.count(k) == 2 and k not in lista2: # Deixa so os primos e tira sua duplicidade
         lista2.append(k)
 
 print(f'O numeros primos entre 1 e {num} são: \n{lista2[::-1]}')
-
 
 
