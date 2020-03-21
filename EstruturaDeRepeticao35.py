@@ -17,3 +17,4 @@ for k in lista:
 print(f'O numeros primos entre 1 e {num} são: \n{lista2[::-1]}')
 
 
+
